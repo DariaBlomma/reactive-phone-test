@@ -1,8 +1,8 @@
 <template>
 	<svg
-			class="icon"
-			width="20"
-			height="20"
+			class="svg"
+			:width="props.size"
+			:height="props.size"
 			viewBox="0 0 20 20"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
@@ -15,12 +15,27 @@
 </template>
 
 <script setup lang="ts">
+interface Props {
+	size?: number,
+}
 
+const props = withDefaults(defineProps<Props>(), {
+	size: 20,
+});
 </script>
 
 <style scoped lang="scss">
 // цвет стрелки это цвет фона, на котором расположена иконка
 .path {
 	fill: $grey_300;
+	transition: fill 0.4s ease;
+
+	&:hover {
+		fill: $grey_800;
+	}
+
+	&:active {
+		fill: rgba($grey_800, 0.7);
+	}
 }
 </style>

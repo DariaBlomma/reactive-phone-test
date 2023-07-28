@@ -1,8 +1,8 @@
 <template>
 	<svg
-			class="icon"
-			width="32"
-			height="32"
+			class="svg"
+			:width="props.size"
+			:height="props.size"
 			viewBox="0 0 32 32"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +24,13 @@
 </template>
 
 <script setup lang="ts">
+interface Props {
+	size?: number,
+}
 
+const props = withDefaults(defineProps<Props>(), {
+	size: 32,
+});
 </script>
 
 <style scoped lang="scss">

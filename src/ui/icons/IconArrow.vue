@@ -1,9 +1,9 @@
 <template>
 	<svg
-			class="icon"
+			class="svg"
 			:class="`_${props.variant}`"
-			width="20"
-			height="16"
+			:width="props.width"
+			:height="props.height"
 			viewBox="0 0 20 16"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
@@ -18,21 +18,38 @@
 <script setup lang="ts">
 interface Props {
 	variant?: 'left' | 'right',
+	width?: number,
+	height?: number,
 }
 
 const props = withDefaults(defineProps<Props>(), {
 	variant: 'left',
+	width: 20,
+	height: 16,
 });
 </script>
 
 <style scoped lang="scss">
-.icon {
+.svg {
 	&._right {
 		transform: rotate(180deg);
+	}
+
+	&:hover {
+		.path {
+			fill: rgba($blue_500, 0.5)
+		}
+	}
+
+	&:active {
+		.path {
+			fill: rgba($blue_500, 0.7)
+		}
 	}
 }
 
 .path {
 	fill: $blue_500;
+	transition: fill 0.4s ease;
 }
 </style>
