@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+//heading-4 in figma
+.heading-2 {
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 26px;
+	color: $grey_800;
+}
+
+//heading-6 in figma
+.heading-3 {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 26px;
+	color: $grey_800;
+}
+
+//paragraph/bold/02 in figma
+.heading-4 {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 20px;
+	color: rgba(#000, 0.87);
+}
+
+//paragraph/bold/03 in figma
+.heading-5 {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+	color: $orange_400;
+}
+
+//paragraph/bold/04 in figma
+.heading-6 {
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 14px;
+	color: $grey_300;
+}
+
+//paragraph/regular/01 in figma
+.paragraph-1 {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 24px;
+}
+
+//paragraph/regular/03 in figma
+.paragraph-2 {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+}

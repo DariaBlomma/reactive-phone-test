@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h1>Home view</h1>
+    <h1 class="heading-2">Home view</h1>
 	  <RouterLink :to="{ name: 'learning'}">Learning link</RouterLink>
 
 	  <div style="margin: 20px">
