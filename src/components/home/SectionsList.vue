@@ -67,6 +67,7 @@ const list: Section[] = [
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(3, 72px);
 	gap: 8px;
+	margin-bottom: 24px;
 }
 
 .section {

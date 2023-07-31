@@ -11,7 +11,7 @@
 				:icon-component="item.icon"
 		/>
 
-		{{ item.title }}
+		<p class="paragraph-2">{{ item.title }}</p>
 	</div>
 </div>
 </template>
@@ -51,10 +51,37 @@ const list = [
 <style scoped lang="scss">
 .quick-links-list {
 	display: flex;
-	gap: 20px;
+	justify-content: space-evenly;
+	gap: 30px;
+	margin-bottom: 72px;
+}
+
+.item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
+	color: $grey_800;
+	text-align: center;
+	transition: opacity 0.4s ease;
+
+	&:hover {
+		opacity: 0.7;
+	}
+
+	&:active {
+		opacity: 0.5;
+	}
 }
 
 .icon {
 	background-color: $red_500;
+}
+
+@media (max-width: $mobile) {
+	.quick-links-list {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 </style>

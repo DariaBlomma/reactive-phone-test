@@ -6,15 +6,9 @@
 			  :fire-amount="13"
 	  />
 	  <LearningPreview category="B" />
-
 	  <SectionsList />
-
-	  <div style="margin: 20px">
-		  <QuickLinksList />
-	  </div>
-	  <div style="margin: 20px">
-		  <AppFooter />
-	  </div>
+	  <QuickLinksList />
+	  <AppFooter />
   </div>
 </template>
 

@@ -82,4 +82,11 @@ const props = withDefaults(defineProps<Props>(), {
 		background-color: rgba($grey_800, 0.5);
 	}
 }
+
+@media (max-width: 250px) {
+	.header-line {
+		flex-direction: column;
+		text-align: center;
+	}
+}
 </style>
