@@ -1,7 +1,7 @@
 <template>
 <div class="sections-list">
 	<div
-			class="section"
+			class="card section"
 			v-for="item in list"
 			:key="item.id"
 	>
@@ -10,7 +10,7 @@
 				:class="item.className"
 				:icon-component="item.iconComponent"
 		/>
-		{{ item.title }}
+		<h4 class="heading-4">{{ item.title }}</h4>
 	</div>
 </div>
 </template>
@@ -62,9 +62,40 @@ const list: Section[] = [
 </script>
 
 <style scoped lang="scss">
+.sections-list {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, 72px);
+	gap: 8px;
+}
+
 .section {
 	display: flex;
 	align-items: center;
+	gap: 8px;
+	color: rgba(#000, 0.87);
+	transition: background-color 0.4s ease, color 0.4s ease;
+
+	&:last-child {
+		grid-column: 1 / 3;
+	}
+
+	&:hover {
+		background-color: rgba($grey_800, 0.7);
+		color: #fff;
+
+		.icon {
+			background-color: rgba(#fff, 0.2);
+		}
+	}
+
+	&:active {
+		background-color: rgba($grey_800, 0.5);
+
+		.icon {
+			background-color: rgba(#fff, 0.2);
+		}
+	}
 }
 
 .icon {
@@ -74,6 +105,13 @@ const list: Section[] = [
 		:deep(.path) {
 			fill: $red_500;
 		}
+	}
+}
+
+@media (max-width: $mobile) {
+	.sections-list {
+		display: flex;
+		flex-direction: column;
 	}
 }
 </style>

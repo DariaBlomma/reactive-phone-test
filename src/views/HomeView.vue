@@ -7,9 +7,7 @@
 	  />
 	  <LearningPreview category="B" />
 
-	  <div style="margin: 20px">
-		  <SectionsList />
-	  </div>
+	  <SectionsList />
 
 	  <div style="margin: 20px">
 		  <QuickLinksList />
@@ -22,9 +20,8 @@
 
 <script setup lang="ts">
 import HeaderLine from '@/components/home/HeaderLine.vue';
-
-import SectionsList from '@/components/home/SectionsList.vue';
 import LearningPreview from '@/components/home/LearningPreview.vue';
+import SectionsList from '@/components/home/SectionsList.vue';
 import QuickLinksList from '@/components/home/QuickLinksList.vue';
 import AppFooter from '@/components/AppFooter.vue';
 </script>

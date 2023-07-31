@@ -63,7 +63,7 @@ const props = withDefaults(defineProps<Props>(), {
 	color: $grey_800;
 	cursor: pointer;
 	user-select: none;
-	transition: background-color, color 0.4s ease;
+	transition: background-color 0.4s ease, color 0.4s ease;
 
 	&._premium {
 		padding: 4px 6px;

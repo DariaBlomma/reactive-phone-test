@@ -55,11 +55,13 @@ const iconSize = computed(() => {
 
 	&._small {
 		width: 40px;
+		min-width: 40px;
 		height: 40px;
 	}
 
 	&._big,
 	&._middle {
+		min-width: 50px;
 		width: 58px;
 		height: 58px;
 	}
