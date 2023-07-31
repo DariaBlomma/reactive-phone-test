@@ -1,9 +1,8 @@
 <template>
 <header class="header-line">
-	<h3 class="heading-3">Ray Driving Theory</h3>
+	<h3 class="heading-3">{{ props.userName }} Driving Theory</h3>
 	<div
 			class="icons"
-			v-if="props.isPremium || props.fireNumbers"
 	>
 		<div
 				v-if="props.isPremium"
@@ -12,11 +11,11 @@
 			<IconCrown />
 		</div>
 		<div
-				v-if="props.fireNumbers"
+				v-if="props.fireAmount"
 				class="button _fire"
 		>
 			<IconFire />
-			<h5 class="heading-5">{{ props.fireNumbers }}</h5>
+			<h5 class="heading-5">{{ props.fireAmount }}</h5>
 		</div>
 	</div>
 </header>
@@ -27,12 +26,13 @@ import IconCrown from '@/ui/icons/IconCrown.vue';
 import IconFire from '@/ui/icons/IconFire.vue';
 
 interface Props {
+	userName: string,
 	isPremium?: boolean,
-	fireNumbers?: number,
+	fireAmount?: number,
 }
 
 const props = withDefaults(defineProps<Props>(), {
-	fireNumbers: 0,
+	fireAmount: 0,
 });
 </script>
 
@@ -43,6 +43,10 @@ const props = withDefaults(defineProps<Props>(), {
 	align-items: center;
 	padding: 15px 16px;
 	margin-bottom: 8px;
+}
+
+.heading-3 {
+	color: $grey_800;
 }
 
 .icons {

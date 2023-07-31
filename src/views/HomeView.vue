@@ -1,21 +1,16 @@
 <template>
   <div class="view home-view">
 	  <HeaderLine
+			  user-name="Ray"
 			  is-premium
-			  :fire-numbers="13"
+			  :fire-amount="13"
 	  />
-	  <RouterLink :to="{ name: 'learning'}">Learning link</RouterLink>
-
-	  <div style="margin: 20px">
-		  <IconArrow />
-	  </div>
+	  <LearningPreview category="B" />
 
 	  <div style="margin: 20px">
 		  <SectionsList />
 	  </div>
-	  <div style="margin: 20px">
-		  <LearningPreview />
-	  </div>
+
 	  <div style="margin: 20px">
 		  <QuickLinksList />
 	  </div>
@@ -28,7 +23,6 @@
 <script setup lang="ts">
 import HeaderLine from '@/components/home/HeaderLine.vue';
 
-import IconArrow from '@/ui/icons/IconArrow.vue';
 import SectionsList from '@/components/home/SectionsList.vue';
 import LearningPreview from '@/components/home/LearningPreview.vue';
 import QuickLinksList from '@/components/home/QuickLinksList.vue';

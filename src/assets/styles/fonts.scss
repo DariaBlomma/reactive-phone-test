@@ -5,7 +5,6 @@
 	font-weight: 600;
 	font-size: 20px;
 	line-height: 26px;
-	color: $grey_800;
 }
 
 //heading-6 in figma
@@ -13,7 +12,6 @@
 	font-weight: 500;
 	font-size: 18px;
 	line-height: 26px;
-	color: $grey_800;
 }
 
 //paragraph/bold/02 in figma
@@ -21,7 +19,7 @@
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 20px;
-	color: rgba(#000, 0.87);
+	color: rgba(#000, 0.87); //todo - remove color
 }
 
 //paragraph/bold/03 in figma
@@ -36,7 +34,6 @@
 	font-weight: 500;
 	font-size: 12px;
 	line-height: 14px;
-	color: $grey_300;
 }
 
 //paragraph/regular/01 in figma
