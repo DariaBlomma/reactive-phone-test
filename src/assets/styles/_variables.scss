@@ -13,10 +13,12 @@ $red_100: #FFE3DD;
 
 $purple_500: #6B2ABC;
 
+$blue_900: #12192B;
 $blue_500: #41416E;
 
 //shadows
-$test-elem-shadow: 0px 0px 4px 0px #12192B0A;
+$test-elem-shadow: 6px 6px 4px 0px rgba($blue_900, 0.04);
+$test-elem-hover-shadow: 6px 6px 4px 0px rgba($blue_900, 0.3);
 
 //adaptive
 $mobile: 360px;

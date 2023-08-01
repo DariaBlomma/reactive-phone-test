@@ -1,11 +1,15 @@
 <template>
-  <div class="view learning-view">
-    <h1 class="heading-2">This is learning view</h1>
+  <div class="view _small-content learning-view">
+    <AppHeader current-route="Learning" />
+	  <TestsList />
   </div>
 </template>
 
 <style scoped lang="scss">
-.heading-2 {
-	color: $grey_800;
-}
+
 </style>
+
+<script setup lang="ts">
+import AppHeader from '@/components/AppHeader.vue';
+import TestsList from '@/components/learning/TestsList.vue';
+</script>
