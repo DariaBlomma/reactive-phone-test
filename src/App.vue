@@ -11,13 +11,8 @@ import { RouterView } from 'vue-router'
 <style scoped lang="scss">
 .wrapper {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-}
-
-@media (min-width: $desktop) {
-	.wrapper {
-		height: 100vh;
-	}
 }
 </style>

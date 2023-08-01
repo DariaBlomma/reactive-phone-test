@@ -1,7 +1,27 @@
 .view {
 	width: 100vw;
-	padding: 48px 18px 0;
+	flex-grow: 1;
+	padding: 48px 18px 16px;
 	background-color: $grey_200;
+	
+	&._no-padding {
+		padding: 0;
+		padding-bottom: 16px;
+	}
+	
+	&._small-content {
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
+		
+		.inner-view {
+			flex-grow: 1;
+		}
+	}
+}
+
+.inner-view {
+	padding: 48px 18px 0;
 }
 
 .card {
@@ -13,12 +33,6 @@
 	&._big {
 		padding: 24px;
 	}
-}
-
-@media (min-width: $tablet) {
-	.view {
-		max-width: $tablet;
-  }
 }
 
 @media (min-width: $desktop) {

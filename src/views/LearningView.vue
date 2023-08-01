@@ -4,5 +4,8 @@
   </div>
 </template>
 
-<style>
+<style scoped lang="scss">
+.heading-2 {
+	color: $grey_800;
+}
 </style>

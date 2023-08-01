@@ -1,13 +1,15 @@
 <template>
-  <div class="view home-view">
-	  <HeaderLine
-			  user-name="Ray"
-			  is-premium
-			  :fire-amount="13"
-	  />
-	  <LearningPreview category="B" />
-	  <SectionsList />
-	  <QuickLinksList />
+  <div class="view _no-padding home-view">
+	  <div class="inner-view">
+		  <HeaderLine
+				  user-name="Ray"
+				  is-premium
+				  :fire-amount="13"
+		  />
+		  <LearningPreview category="B" />
+		  <SectionsList />
+		  <QuickLinksList />
+	  </div>
 	  <AppFooter />
   </div>
 </template>
