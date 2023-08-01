@@ -1,6 +1,6 @@
 <template>
 	<div class="question">
-		<span class="paragraph-1">{{ props.text }}</span>
+		<span class="paragraph-1">{{ props.item.text }}</span>
 		<IconCheckCircle
 				v-if="props.isPassed"
 				class="icon"
@@ -9,12 +9,14 @@
 </template>
 
 <script setup lang="ts">
+import type { TestElem } from '@/types';
 import IconCheckCircle from '@/ui/icons/IconCheckCircle.vue';
 
 interface Props {
-	text?: string | number,
+	item: TestElem,
 	isPassed?: boolean,
 }
+
 const props = defineProps<Props>();
 </script>
 

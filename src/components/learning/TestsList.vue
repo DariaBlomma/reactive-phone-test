@@ -6,18 +6,26 @@
 
 	<div class="list">
 		<TestQuestion
-				v-for="item in 20"
-				:key="20"
-				:text="item"
-				:is-passed="item === 4"
+				v-for="item in store.fakeList"
+				:key="item.id"
+				:item="item"
+				:is-passed="store.checkIsPassed(item.id)"
+				@click="handleQuestionClick(item)"
 		/>
 	</div>
 </div>
 </template>
 
 <script setup lang="ts">
-
+import type { TestElem } from '@/types';
+import { useLearningStore } from '@/stores/learning';
 import TestQuestion from '@/components/learning/TestQuestion.vue';
+
+const store = useLearningStore();
+
+const handleQuestionClick = (item: TestElem) => {
+	store.handleQuestionPassFail(item);
+};
 </script>
 
 <style scoped lang="scss">

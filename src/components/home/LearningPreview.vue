@@ -18,13 +18,14 @@
 		</RouterLink>
 	</div>
 	<ProgressBar
-			:total="20"
-			:passed="5"
+			:total="store.fakeList.length"
+			:passed="store.passedList.length"
 	/>
 </div>
 </template>
 
 <script setup lang="ts">
+import { useLearningStore } from '@/stores/learning';
 import EncircledIcon from '@/components/EncircledIcon.vue';
 import IconGraduationCap from '@/ui/icons/IconGraduationCap.vue';
 import IconShevronCircleRight from '@/ui/icons/IconShevronCircleRight.vue';
@@ -35,6 +36,7 @@ interface Props {
 }
 
 const props = defineProps<Props>();
+const store = useLearningStore();
 </script>
 
 <style scoped lang="scss">

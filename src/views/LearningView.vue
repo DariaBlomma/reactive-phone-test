@@ -5,11 +5,11 @@
   </div>
 </template>
 
-<style scoped lang="scss">
-
-</style>
-
 <script setup lang="ts">
 import AppHeader from '@/components/AppHeader.vue';
 import TestsList from '@/components/learning/TestsList.vue';
 </script>
+
+<style scoped lang="scss">
+
+</style>
