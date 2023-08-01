@@ -29,7 +29,7 @@ import { useLearningStore } from '@/stores/learning';
 import EncircledIcon from '@/components/EncircledIcon.vue';
 import IconGraduationCap from '@/ui/icons/IconGraduationCap.vue';
 import IconShevronCircleRight from '@/ui/icons/IconShevronCircleRight.vue';
-import ProgressBar from '@/components/ProgressBar.vue';
+import ProgressBar from '@/ui/UiProgressBar.vue';
 
 interface Props {
 	category: string,
