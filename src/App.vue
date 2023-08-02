@@ -1,6 +1,10 @@
 <template>
 	<main class="wrapper">
-		<RouterView />
+		<RouterView v-slot="{ Component }">
+			<Transition name="fade">
+				<component :is="Component" />
+			</Transition>
+		</RouterView>
 	</main>
 </template>
 

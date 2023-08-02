@@ -11,7 +11,9 @@
 			<h5 class="heading-5">{{ tab.name }}</h5>
 		</div>
 	</div>
-	<slot :active-id="activeId"></slot>
+	<Transition name="appear">
+		<slot :active-id="activeId"></slot>
+	</Transition>
 </div>
 </template>
 
