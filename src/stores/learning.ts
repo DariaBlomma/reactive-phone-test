@@ -1,8 +1,7 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
 import type { TestElem } from '@/types';
-import { fakeList } from '@/constants';
-
+import fakeList from '@/constants/fakeTestsList.json';
 
 export const useLearningStore = defineStore('learning', () => {
   const passedList = ref<number[]>([]);
