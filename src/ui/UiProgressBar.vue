@@ -7,20 +7,25 @@
 	</slot>
 	<div class="progress-line">
 		<div
-				v-for="elem in elemsCount"
+				v-for="elem in progressElemsCount"
 				:key="elem"
 				class="elem"
-				:class="{ _filled: elem <= filledCount }"
-		></div>
+		>
+			<div
+					class="filler"
+					:style="{
+						width: calculateFillerWidth(elem)
+					}"
+			></div>
+		</div>
 	</div>
 </div>
 </template>
 
 <script setup lang="ts">
 /*
-Компонент не учитывает дробные вариации прогресса.
-Например, 20 вопросов, шаг - 5, то есть всего 4 полоски.
-Если пройдено 7 вопросов, будет заполнена только 1 полоска
+Компонент учитывает дробные вариации прогресса,
+каждый пройденный вопрос учитывается.
  */
 
 import { computed } from 'vue';
@@ -36,14 +41,26 @@ const props = withDefaults(defineProps<Props>(), {
 	step: 5,
 });
 
-const elemsCount = computed(() => Math.ceil(props.total / props.step));
-const filledCount = computed(() => {
-	return props.passed >= props.step ? Math.floor(props.passed / props.step) : 0;
-});
-
 const title = computed(() => {
 	return `${props.passed} ${conjugateWord('question', props.passed)} out of ${props.total} passed`;
 });
+
+const progressElemsCount = computed(() => Math.ceil(props.total / props.step));
+const filledCount = computed<string>(() => {
+	return (props.passed / props.step).toFixed(2);
+});
+const integerFilled = Math.floor(Number(filledCount.value));
+const fractionFilled = filledCount.value.slice(-2);
+
+const calculateFillerWidth = (elem: number): string => {
+	let width = '0';
+	if (elem <= integerFilled ) {
+		width = '100%';
+	} else if (elem === integerFilled + 1) {
+		width = `${fractionFilled}%`;
+	}
+	return width;
+}
 </script>
 
 <style scoped lang="scss">
@@ -62,10 +79,11 @@ const title = computed(() => {
 	height: 6px;
 	border-radius: 5px;
 	background-color: rgba($green_400, 0.1);
-	transition: background-color 0.4s ease;
+}
 
-	&._filled {
-		background-color: $green_400;
-	}
+.filler {
+	height: 100%;
+	background-color: $green_400;
+	border-radius: inherit;
 }
 </style>
