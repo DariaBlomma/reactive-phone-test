@@ -1,5 +1,5 @@
 <template>
-  <div class="view _no-padding home-view">
+  <div class="view _no-padding _with-scroll home-view">
 	  <div class="inner-view">
 		  <HeaderLine
 				  user-name="Ray"

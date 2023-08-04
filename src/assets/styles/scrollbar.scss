@@ -1,0 +1,15 @@
+._with-scroll {
+	&::-webkit-scrollbar {
+		height: 3px; //for horizontal
+		width: 3px; //for vertical
+	}
+	
+	&::-webkit-scrollbar-track {
+		background: transparent;
+	}
+	
+	&::-webkit-scrollbar-thumb {
+		background: $grey_300;
+		border-radius: 2px;
+	}
+}

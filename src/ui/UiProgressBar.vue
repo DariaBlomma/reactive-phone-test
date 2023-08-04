@@ -71,7 +71,7 @@ const calculateFillerWidth = (elem: number): string => {
 
 .progress-line {
 	display: grid;
-	grid-template-columns: repeat(v-bind(elemsCount), 1fr);
+	grid-template-columns: repeat(v-bind(progressElemsCount), 1fr);
 	grid-column-gap: 4px;
 }
 

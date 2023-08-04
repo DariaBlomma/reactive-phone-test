@@ -38,5 +38,7 @@
 @media (min-width: $desktop) {
 	.view {
 		width: $mobile;
+		max-height: 100vh;
+		overflow: auto;
 	}
 }

@@ -21,3 +21,8 @@ body {
   font-weight: normal;
 }
 
+@media (min-width: $desktop) {
+  body {
+    overflow: hidden;
+  }
+}

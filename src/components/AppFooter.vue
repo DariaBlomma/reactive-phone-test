@@ -119,4 +119,11 @@ const list: FooterItem[] = [
 		grid-template-columns: repeat(2, 1fr);
 	}
 }
+
+@media (min-width: $desktop) {
+	.app-footer {
+		left: initial;
+		right: initial;
+	}
+}
 </style>

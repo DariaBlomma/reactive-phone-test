@@ -1,5 +1,5 @@
 <template>
-	<div class="view _no-padding">
+	<div class="view _no-padding _with-scroll">
 		<div class="inner-view">
 			<slot></slot>
 		</div>
